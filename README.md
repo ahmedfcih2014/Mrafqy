@@ -29,7 +29,6 @@ admin has the ability to manage data:
   * Docker
   * ORM (sequelize)
 
-`Will use functional programming paradiagm`
 
 Steps to buidl this project up `TODO`:
 * `Done`Draw ERD
