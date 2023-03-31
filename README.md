@@ -32,8 +32,8 @@ admin has the ability to manage data:
 `Will use functional programming paradiagm`
 
 Steps to buidl this project up `TODO`:
-* `In Progress`Draw ERD
-* `Backlog` Draw Wireframe
+* `Done`Draw ERD
+* `Done` Draw Wireframe
 * `Backlog` Sequence Diagram
 * `Backlog` Set Deadline to finish Project
 * `Backlog` Admin Panel (front & back)
@@ -42,3 +42,6 @@ Steps to buidl this project up `TODO`:
 * `Backlog`Add Notifications (as a new feature for an exists app)
 * `Backlog`Write Tests
 * `Backlog`How to convert to Event Driven Architecture (using tool like Rabbit MQ)
+
+Google Drive Link will contains all important files (analysis files)
+https://drive.google.com/drive/folders/1NW1FL7raf5dY4tDpgqHbOOCqkfGmQQx-?usp=sharing
