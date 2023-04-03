@@ -43,4 +43,4 @@ Steps to buidl this project up `TODO`:
 * `Backlog`How to convert to Event Driven Architecture (using tool like Rabbit MQ)
 
 Google Drive Link will contains all important files (analysis files)
-https://drive.google.com/drive/folders/1NW1FL7raf5dY4tDpgqHbOOCqkfGmQQx-?usp=sharing
+<a href="https://drive.google.com/drive/folders/1NW1FL7raf5dY4tDpgqHbOOCqkfGmQQx-?usp=sharing"> Sequence Diagram </a>
