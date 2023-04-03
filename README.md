@@ -33,7 +33,7 @@ admin has the ability to manage data:
 Steps to buidl this project up `TODO`:
 * `Done`Draw ERD
 * `Done` Draw Wireframe
-* `Backlog` Sequence Diagram
+* `In Progress` Sequence Diagram
 * `Backlog` Set Deadline to finish Project
 * `Backlog` Admin Panel (front & back)
 * `Backlog`Client App (front & back)
