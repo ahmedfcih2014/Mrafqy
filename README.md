@@ -34,9 +34,8 @@ Steps to buidl this project up `TODO`:
 * `Done`Draw ERD
 * `Done` Draw Wireframe
 * `Done` Sequence Diagram
-* `In Progress` Set Deadline to finish Project
-* `Backlog` Admin Panel (front & back)
-* `Backlog`Client App (front & back)
+* `Done` Set Deadline to finish Project [60~90 hours]
+* `In Proress` Work on Tasks
 * `Backlog`Dockerize the app
 * `Backlog`Add Notifications (as a new feature for an exists app)
 * `Backlog`Write Tests
@@ -45,3 +44,33 @@ Steps to buidl this project up `TODO`:
 <a href="https://drive.google.com/drive/folders/1NW1FL7raf5dY4tDpgqHbOOCqkfGmQQx-?usp=sharing" target="_blank">
  Google Drive Link will contains all important files (analysis files)
 </a>
+
+Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
+#### Admin
+* Login API `1 hour`
+* Customers crud API `3 hours`
+* Services crud API `3 hours`
+* Customer wallets withdraw & deposit API `2 hours`
+* Admins crud API `3 hours`
+* Customer report API `3 hours`
+  * customer balance
+  * transactions (desc order)
+  * invoices (desc order)
+* Dashboard API `1 hour`
+  * counters [customers, services, total customer balance]
+  * last 5 transactions (wallet transactions)
+  * last 5 bought services + invoices
+  * last 5 registered customers
+
+#### Customer
+* Login API `1 hour`
+* Register API `1 hour`
+* Get Profile API `1 hour`
+* Change Password API `1 hour`
+* Home API `1 hour`
+* Edit Profile API `1 hour`
+* Invoices List/Show API `2 hours`
+* Transfer List/Show API `2 hours`
+* Services List/Show API `2 hours`
+* Buy Service API `3 hours`
+* Transfer To Wallet API `3 hours`
