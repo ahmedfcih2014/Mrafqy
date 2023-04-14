@@ -1,10 +1,20 @@
+import AdminRepo from "../../repositories/AdminRepo.js"
+
 export default {
-    login: (req, res) => {
+    login: async (req, res) => {
         const {user, password} = req.body
-        console.log(user, password)
-        res.json({
-            "data": [{id: 1, name: "Ahmed Hesham", type: "Admin", token: "123456789"}],
-            "message": "Success"
-        })
+        
+        try {
+            const admin = await AdminRepo.adminLogin(user, password)
+            res.json({
+                "data": {id: admin.id, name: admin.name, token: admin.token},
+                "message": "Success"
+            })
+        } catch(err) {
+            res.status(401).json({
+                "data": {},
+                "message": "Unauthorized"
+            })
+        }
     }
 }
