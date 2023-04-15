@@ -4,6 +4,7 @@ CREATE TABLE admins (
     username varchar(200),
     password varchar(200),
     token varchar(200) null,
+    token_valid_til timestamp null,
     created_at timestamp null,
     updated_at timestamp null
 )

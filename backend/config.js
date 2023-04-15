@@ -6,5 +6,6 @@ export default {
         database: 'mrafqy',
         password: 'ahmed',
         port: 5432,
-    }
+    },
+    adminTokenTime: 120,// minutes
 }
