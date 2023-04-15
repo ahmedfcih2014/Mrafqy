@@ -1,4 +1,3 @@
-import sha1 from "../libs/sha1.js"
 import pgPool from "./Connection.js"
 
 export default {

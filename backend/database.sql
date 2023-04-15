@@ -19,3 +19,13 @@ CREATE TABLE customers (
     created_at timestamp null,
     updated_at timestamp null
 )
+
+CREATE TABLE services (
+    ID SERIAL PRIMARY KEY,
+    name varchar(200),
+    icon varchar(200),
+    price double precision default 0,
+    brief text null,
+    created_at timestamp null,
+    updated_at timestamp null
+)
