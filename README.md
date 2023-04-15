@@ -50,8 +50,8 @@ Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
 * Login API `1 hour`
 * Customers crud API `3 hours`
 * Services crud API `3 hours`
-* Customer wallets withdraw & deposit API `2 hours`
 * Admins crud API `3 hours`
+* Customer wallets withdraw & deposit API `2 hours`
 * Customer report API `3 hours`
   * customer balance
   * transactions (desc order)
