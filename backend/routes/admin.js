@@ -37,5 +37,6 @@ routes.delete("/admins/:id", AdminTokenValid, Admins.destroy)
 
 routes.post("/wallet/withdraw", AdminTokenValid, WalletOperation, Wallet.withdraw)
 routes.post("/wallet/deposit", AdminTokenValid, WalletOperation, Wallet.deposit)
+routes.get("/wallet/:customerId", AdminTokenValid, Wallet.showByCustomer)
 
 export default routes

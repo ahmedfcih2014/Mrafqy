@@ -70,4 +70,10 @@ export default {
             dbClient.release()
         }
     },
+    showByCustomerId: async (customerId) => {
+        const result = await pgPool.query("SELECT * FROM wallets WHERE customer_id = $1", [customerId])
+        if (result.rowCount <= 0) throw "Wallet Not Found"
+
+        return result.rows[0]
+    },
 }
