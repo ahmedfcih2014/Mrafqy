@@ -19,7 +19,19 @@ export default {
         )
         
         if (result.rowCount <= 0) throw "Customer not created for current time, try again later"
-        return result.rows[0]
+        const customerRow = result.rows[0]
+        
+        await pgPool.query(
+            "INSERT INTO wallets (customer_id, balance, created_at, updated_at) VALUES ($1, $2, $3, $4)",
+            [
+                customerRow.id,
+                0,
+                now,
+                now,
+            ]
+        )
+
+        return customer
     },
     getById: async id => {
         const result = await pgPool.query("SELECT * FROM customers WHERE id = $1", [id])

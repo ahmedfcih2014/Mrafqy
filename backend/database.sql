@@ -7,7 +7,7 @@ CREATE TABLE admins (
     token_valid_til timestamp null,
     created_at timestamp null,
     updated_at timestamp null
-)
+);
 
 CREATE TABLE customers (
     ID SERIAL PRIMARY KEY,
@@ -18,7 +18,7 @@ CREATE TABLE customers (
     national_id varchar(200) null,
     created_at timestamp null,
     updated_at timestamp null
-)
+);
 
 CREATE TABLE services (
     ID SERIAL PRIMARY KEY,
@@ -28,4 +28,24 @@ CREATE TABLE services (
     brief text null,
     created_at timestamp null,
     updated_at timestamp null
-)
+);
+
+CREATE TABLE wallets (
+    ID SERIAL PRIMARY KEY,
+    customer_id bigint,
+    balance double precision default 0,
+    created_at timestamp null,
+    updated_at timestamp null
+);
+
+CREATE TYPE wallet_transaction_types AS ENUM ('in', 'out');
+
+CREATE TABLE wallet_transactions (
+    ID SERIAL PRIMARY KEY,
+    wallet_id bigint,
+    amount double precision default 0,
+    type wallet_transaction_types,
+    note varchar(200) null,
+    created_at timestamp null,
+    updated_at timestamp null
+);

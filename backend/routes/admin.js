@@ -10,6 +10,8 @@ import UpdateService from '../validations/admin/services/UpdateService.js'
 import Admins from '../handlers/admin/Admins.js'
 import UpdateAdmin from '../validations/admin/admins/UpdateAdmin.js'
 import CreateAdmin from '../validations/admin/admins/CreateAdmin.js'
+import WalletOperation from '../validations/admin/customers/WalletOperation.js'
+import Wallet from '../handlers/admin/Wallet.js'
 
 const routes = express.Router()
 
@@ -32,5 +34,8 @@ routes.post("/admins", AdminTokenValid, CreateAdmin, Admins.create)
 routes.get("/admins/:id", AdminTokenValid, Admins.show)
 routes.put("/admins/:id", AdminTokenValid, UpdateAdmin, Admins.update)
 routes.delete("/admins/:id", AdminTokenValid, Admins.destroy)
+
+routes.post("/wallet/withdraw", AdminTokenValid, WalletOperation, Wallet.withdraw)
+routes.post("/wallet/deposit", AdminTokenValid, WalletOperation, Wallet.deposit)
 
 export default routes
