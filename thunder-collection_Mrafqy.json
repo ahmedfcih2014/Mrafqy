@@ -1,0 +1,538 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Mrafqy",
+    "dateExported": "2023-04-23T12:33:35.031Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2023-04-14T18:11:45.430Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b46912e4-913e-44de-8b16-4babea70dc72",
+            "name": "Admins",
+            "containerId": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "created": "2023-04-15T21:24:04.426Z",
+            "sortNum": 12500
+        },
+        {
+            "_id": "3bfaba1e-e72e-44cd-b976-74399766a329",
+            "name": "Services",
+            "containerId": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "created": "2023-04-15T17:54:09.963Z",
+            "sortNum": 15000
+        },
+        {
+            "_id": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Customers",
+            "containerId": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "created": "2023-04-14T18:12:33.306Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "ce4fa553-141d-43b6-8fc7-dcae471b3a50",
+            "name": "Wallet",
+            "containerId": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "created": "2023-04-16T21:51:10.543Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f109274c-2073-44a3-bf84-27fcedf32379",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "name": "Login",
+            "url": "http://localhost:8080/admin/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-14T18:12:09.953Z",
+            "modified": "2023-04-14T18:12:09.953Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": \"superadmin\",\n  \"password\": \"superadmin\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "91596d77-f0ef-4ae5-92a7-b1baa3a0177c",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Create",
+            "url": "http://localhost:8080/admin/customers",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-14T18:12:43.859Z",
+            "modified": "2023-04-23T12:14:07.252Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Ahmed Hesham\",\n  \"phone\": \"01033406149\",\n  \"password\": \"123456\",\n  \"photo\": \"https://placeholder-images.com/ahmed-hesham.png\",\n  \"national_id\": \"29604270101391\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ed26e17d-a645-44ff-a082-e9718ea8e34c",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "3bfaba1e-e72e-44cd-b976-74399766a329",
+            "name": "Create",
+            "url": "http://localhost:8080/admin/services",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-15T17:54:09.963Z",
+            "modified": "2023-04-15T17:55:36.657Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Ahmed Hesham\",\n  \"price\": 100.5,\n  \"icon\": \"https://placeholder-images.com/ahmed-hesham.png\",\n  \"brief\": \"Small brief about service\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "484af9fa-6cb3-4fe7-835e-acb63cf0be03",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "b46912e4-913e-44de-8b16-4babea70dc72",
+            "name": "Create",
+            "url": "http://localhost:8080/admin/admins",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-15T21:24:04.426Z",
+            "modified": "2023-04-15T21:25:59.225Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Ahmed Hesham\",\n  \"username\": \"superadmin3\",\n  \"password\": \"123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ee3c6c3a-4221-470e-a266-02141c872591",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Show",
+            "url": "http://localhost:8080/admin/customers/2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-14T18:32:23.816Z",
+            "modified": "2023-04-15T17:38:06.021Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [
+                {
+                    "name": "x-token-header",
+                    "value": "bcee4eb85a0f7565ac2ff0ece8c947650f7982afc88312895cdc9518757e5952",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "d99e837c-38bb-4181-ac89-36937ec1d9c8",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Delete",
+            "url": "http://localhost:8080/admin/customers/8",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-04-14T21:58:21.421Z",
+            "modified": "2023-04-15T17:38:14.885Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "558bd24b-8bdd-4d0b-a11c-d9daaf5303de",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "3bfaba1e-e72e-44cd-b976-74399766a329",
+            "name": "Show",
+            "url": "http://localhost:8080/admin/services/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-15T17:54:09.964Z",
+            "modified": "2023-04-15T17:55:57.832Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f7e6e334-ae99-473f-85c0-b1486d438122",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "3bfaba1e-e72e-44cd-b976-74399766a329",
+            "name": "Delete",
+            "url": "http://localhost:8080/admin/services/1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-04-15T17:54:09.965Z",
+            "modified": "2023-04-15T17:56:06.757Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9a3cb74f-48c5-41b2-97db-642503e492ea",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "b46912e4-913e-44de-8b16-4babea70dc72",
+            "name": "Show",
+            "url": "http://localhost:8080/admin/admins/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-15T21:24:04.427Z",
+            "modified": "2023-04-15T21:27:04.592Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8ef3f033-126d-4b70-b10e-4971fbbfb479",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "b46912e4-913e-44de-8b16-4babea70dc72",
+            "name": "Delete",
+            "url": "http://localhost:8080/admin/admins/2",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-04-15T21:24:04.428Z",
+            "modified": "2023-04-15T21:26:17.742Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6e1966e6-317e-49eb-ae5e-12ccc0294c7c",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Update",
+            "url": "http://localhost:8080/admin/customers/4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-04-14T18:47:25.072Z",
+            "modified": "2023-04-15T17:38:21.961Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Hassan Allam\",\n  \"phone\": \"01033406140\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b8d8e316-d68f-4845-a1b0-b17ed1b8a0fd",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Index",
+            "url": "http://localhost:8080/admin/customers?page=2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-04-14T22:32:05.871Z",
+            "modified": "2023-04-23T12:14:26.304Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "8a212850-f7ba-451b-aaec-e7943a67ae13",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "3bfaba1e-e72e-44cd-b976-74399766a329",
+            "name": "Update",
+            "url": "http://localhost:8080/admin/services/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-04-15T17:54:09.967Z",
+            "modified": "2023-04-15T17:57:38.001Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Hassan Allam\",\n  \"price\": 110,\n  \"brief\": \"Testing done dude ,i hope this update makes you happy\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "22072672-e1bd-46a1-b438-81c7997c83df",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "3bfaba1e-e72e-44cd-b976-74399766a329",
+            "name": "Index",
+            "url": "http://localhost:8080/admin/services?per_page=2&page=1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-04-15T17:54:09.968Z",
+            "modified": "2023-04-15T17:54:27.187Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [
+                {
+                    "name": "per_page",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "622843b4-716c-4bc2-b30b-fe7674005197",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "b46912e4-913e-44de-8b16-4babea70dc72",
+            "name": "Update",
+            "url": "http://localhost:8080/admin/admins/3",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-04-15T21:24:04.429Z",
+            "modified": "2023-04-15T21:27:24.807Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Ahmed Hesham (Edited)\",\n  \"username\": \"superadmin3\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6dbc66e-c6dc-449e-a11a-b08b6c1bf0a2",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "b46912e4-913e-44de-8b16-4babea70dc72",
+            "name": "Index",
+            "url": "http://localhost:8080/admin/admins?per_page=2&page=1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-04-15T21:24:04.430Z",
+            "modified": "2023-04-15T21:28:12.251Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [
+                {
+                    "name": "per_page",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "e124272b-0a80-4bca-b807-1d83312bcc84",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "ce4fa553-141d-43b6-8fc7-dcae471b3a50",
+            "name": "Withdraw",
+            "url": "http://localhost:8080/admin/wallet/withdraw",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-04-16T21:51:19.737Z",
+            "modified": "2023-04-23T12:24:47.544Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer_id\": 15,\n  \"amount\": 100\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "783b628a-f39f-400c-9e99-6eecd6b80602",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "ce4fa553-141d-43b6-8fc7-dcae471b3a50",
+            "name": "Deposit",
+            "url": "http://localhost:8080/admin/wallet/deposit",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-04-16T22:06:52.266Z",
+            "modified": "2023-04-23T12:16:03.134Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer_id\": 15,\n  \"amount\": 500\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c63f35bd-d21b-43a9-ae97-286e47ddd7fe",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "ce4fa553-141d-43b6-8fc7-dcae471b3a50",
+            "name": "Show By Customer",
+            "url": "http://localhost:8080/admin/wallet/14",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-04-16T22:24:11.409Z",
+            "modified": "2023-04-16T22:24:45.573Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "33ab9708-6b7c-49d2-ac0c-331bfcc2683c",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Report",
+            "url": "http://localhost:8080/admin/customer-report/15",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-04-23T12:11:24.500Z",
+            "modified": "2023-04-23T12:14:32.918Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c4d01831-d6ed-4e99-9a02-74f7ea008ed5",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Report Invoices",
+            "url": "http://localhost:8080/admin/customer-report/15/invoices",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-04-23T12:28:43.441Z",
+            "modified": "2023-04-23T12:28:58.240Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a9440fa9-867d-410a-b219-3799d4096be9",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "f3598998-bd17-43e1-8afb-8566ed8c6c55",
+            "name": "Report Transactions",
+            "url": "http://localhost:8080/admin/customer-report/15/transactions",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-04-23T12:31:44.480Z",
+            "modified": "2023-04-23T12:31:59.957Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
