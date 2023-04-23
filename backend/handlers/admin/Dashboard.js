@@ -5,17 +5,10 @@ import WalletRepo from "../../repositories/WalletRepo.js";
 
 export default {
     dashboard: async (req, res) => {
-        const customerId = req.params.customerId
-        const limit = req.query.per_page ? req.query.per_page : 10
-        const page = req.query.page ? req.query.page : 1
-
         try {
             const customers = await CustomerRepo.lastCustomers(5);
-            console.log(1)
             const walletTransactions = await WalletRepo.lastTransactions(5);
-            console.log(2)
             const invoices = await InvoiceRepo.lastServices(5);
-            console.log(3)
             
             res.json({
                 "data": {
