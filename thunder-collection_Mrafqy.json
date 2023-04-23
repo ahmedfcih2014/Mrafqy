@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Mrafqy",
-    "dateExported": "2023-04-23T12:33:35.031Z",
+    "dateExported": "2023-04-23T17:23:46.178Z",
     "version": "1.1",
     "folders": [
         {
@@ -128,6 +128,30 @@
             "body": {
                 "type": "json",
                 "raw": "{\n  \"name\": \"Ahmed Hesham\",\n  \"username\": \"superadmin3\",\n  \"password\": \"123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "74f1ebc3-64d5-4bbf-b811-27d0953bf3c6",
+            "colId": "e99851f2-a9ec-4e12-a116-3179b667b569",
+            "containerId": "8377793d-c969-4788-bb29-aad08e2a69b2",
+            "name": "Dashboard",
+            "url": "http://localhost:8080/admin/dashboard",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-23T17:13:46.228Z",
+            "modified": "2023-04-23T17:14:23.077Z",
+            "headers": [
+                {
+                    "name": "x-admin-token",
+                    "value": "{{admin-token}}"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": \"superadmin\",\n  \"password\": \"superadmin\"\n}",
                 "form": []
             },
             "tests": []
