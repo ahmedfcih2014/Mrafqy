@@ -88,4 +88,26 @@ export default {
             count: countResult.rows[0].count
         }
     },
+    lastTransactions: async (limit) => {
+        const select = [
+            "wallet_transactions.amount as transaction_amount",
+            "wallet_transactions.type as transaction_type",
+            "wallet_transactions.note as transaction_note",
+            "customers.name as customer_name",
+        ]
+        const result = await pgPool.query(
+            `SELECT ${select.join(",")}
+            FROM wallet_transactions
+            JOIN wallets ON wallet_transactions.wallet_id = wallets.id
+            JOIN customers ON wallets.customer_id = customers.id
+            ORDER BY wallet_transactions.id DESC limit $1`,
+            [limit]
+        )
+
+        return result.rows
+    },
+    totalBalances: async () => {
+        const balanceResult = await pgPool.query("SELECT SUM(balance) as total_balance FROM wallets")
+        return balanceResult.rows[0].total_balance
+    },
 }

@@ -62,4 +62,8 @@ export default {
             count: countResult.rows[0].count
         }
     },
+    servicesCount: async (limit) => {
+        const countResult = await pgPool.query("SELECT COUNT(id) as count FROM services")
+        return countResult.rows[0].count
+    },
 }

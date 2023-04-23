@@ -13,6 +13,7 @@ import CreateAdmin from '../validations/admin/admins/CreateAdmin.js'
 import WalletOperation from '../validations/admin/customers/WalletOperation.js'
 import Wallet from '../handlers/admin/Wallet.js'
 import Invoices from '../handlers/admin/Invoices.js'
+import Dashboard from '../handlers/admin/Dashboard.js'
 
 const routes = express.Router()
 
@@ -43,5 +44,7 @@ routes.get("/wallet/:customerId", AdminTokenValid, Wallet.showByCustomer)
 routes.get("/customer-report/:customerId", AdminTokenValid, Customer.customerReport)
 routes.get("/customer-report/:customerId/transactions", AdminTokenValid, Wallet.customerTransactions)
 routes.get("/customer-report/:customerId/invoices", AdminTokenValid, Invoices.customerInvoices)
+
+routes.get("/dashboard", AdminTokenValid, Dashboard.dashboard)
 
 export default routes

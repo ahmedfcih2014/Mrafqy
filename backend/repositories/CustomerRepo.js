@@ -76,4 +76,13 @@ export default {
             count: countResult.rows[0].count
         }
     },
+    lastCustomers: async (limit) => {
+        const result = await pgPool.query("SELECT * FROM customers order by id desc limit $1", [limit])
+
+        return result.rows
+    },
+    customersCount: async () => {
+        const countResult = await pgPool.query("SELECT COUNT(id) as count FROM customers")
+        return countResult.rows[0].count
+    },
 }
