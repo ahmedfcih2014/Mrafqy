@@ -56,5 +56,28 @@ export default {
                 "error": err
             })
         }
+    },
+    customerTransactions: async (req, res) => {
+        const customerId = req.params.customerId
+        const limit = req.query.per_page ? req.query.per_page : 10
+        const page = req.query.page ? req.query.page : 1
+
+        try {
+            const wallet = await WalletRepo.showByCustomerId(customerId)
+            const transactions = await WalletRepo.getTransactionsList(wallet.id, limit, page)
+            
+            res.json({
+                "data": {
+                    data: transactions.rows,
+                    total: transactions.count,
+                    current_page: page,
+                    per_page: limit,
+                },
+                "message": "Success"
+            })
+        } catch (err) {
+            console.log(err)
+            res.status(400).json({"data": {}, "message": "Something went wrong", "error": err})
+        }
     }
 }

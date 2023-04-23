@@ -76,4 +76,16 @@ export default {
 
         return result.rows[0]
     },
+    getTransactionsList: async (walletId, limit, page) => {
+        const offset = limit * (page - 1)
+
+        const result = await pgPool.query("SELECT * FROM wallet_transactions where wallet_id = $1 order by id desc limit $2 offset $3", [walletId, limit, offset])
+
+        const countResult = await pgPool.query("SELECT COUNT(id) as count FROM wallet_transactions where wallet_id = $1", [walletId])
+
+        return {
+            rows: result.rows,
+            count: countResult.rows[0].count
+        }
+    },
 }

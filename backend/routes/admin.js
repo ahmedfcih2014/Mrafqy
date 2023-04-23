@@ -12,6 +12,7 @@ import UpdateAdmin from '../validations/admin/admins/UpdateAdmin.js'
 import CreateAdmin from '../validations/admin/admins/CreateAdmin.js'
 import WalletOperation from '../validations/admin/customers/WalletOperation.js'
 import Wallet from '../handlers/admin/Wallet.js'
+import Invoices from '../handlers/admin/Invoices.js'
 
 const routes = express.Router()
 
@@ -38,5 +39,9 @@ routes.delete("/admins/:id", AdminTokenValid, Admins.destroy)
 routes.post("/wallet/withdraw", AdminTokenValid, WalletOperation, Wallet.withdraw)
 routes.post("/wallet/deposit", AdminTokenValid, WalletOperation, Wallet.deposit)
 routes.get("/wallet/:customerId", AdminTokenValid, Wallet.showByCustomer)
+
+routes.get("/customer-report/:customerId", AdminTokenValid, Customer.customerReport)
+routes.get("/customer-report/:customerId/transactions", AdminTokenValid, Wallet.customerTransactions)
+routes.get("/customer-report/:customerId/invoices", AdminTokenValid, Invoices.customerInvoices)
 
 export default routes

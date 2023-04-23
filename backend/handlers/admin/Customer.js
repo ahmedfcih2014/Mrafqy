@@ -1,4 +1,6 @@
 import CustomerRepo from "../../repositories/CustomerRepo.js"
+import InvoiceRepo from "../../repositories/InvoiceRepo.js";
+import WalletRepo from "../../repositories/WalletRepo.js";
 
 export default {
     create: async (req, res) => {
@@ -92,6 +94,39 @@ export default {
                     total: customers.count,
                     current_page: page,
                     per_page: limit
+                },
+                "message": "Success"
+            })
+        } catch (err) {
+            console.log(err)
+            res.status(400).json({"data": {}, "message": "Something went wrong", "error": err})
+        }
+    },
+    customerReport: async (req, res) => {
+        const customerId = req.params.customerId
+        const limit = 10
+        const page = 1
+
+        try {
+            const wallet = await WalletRepo.showByCustomerId(customerId)
+            const walletTransactions = await WalletRepo.getTransactionsList(wallet.id, limit, page)
+            const invoices = await InvoiceRepo.getCustomerInvoices(customerId, limit, page)
+
+            res.json({
+                "data": {
+                    balance: wallet.balance,
+                    transactions: {
+                        data: walletTransactions.rows,
+                        total: walletTransactions.count,
+                        current_page: page,
+                        per_page: limit
+                    },
+                    invoices: {
+                        data: invoices.rows,
+                        total: invoices.count,
+                        current_page: page,
+                        per_page: limit
+                    }
                 },
                 "message": "Success"
             })

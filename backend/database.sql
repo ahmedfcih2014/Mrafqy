@@ -49,3 +49,15 @@ CREATE TABLE wallet_transactions (
     created_at timestamp null,
     updated_at timestamp null
 );
+
+CREATE TABLE invoices (
+    ID SERIAL PRIMARY KEY,
+    customer_id bigint,
+    service_id bigint,
+    total double precision default 0,
+    tax double precision default 0,
+    vat double precision default 0,
+    serial varchar(200),
+    created_at timestamp null,
+    updated_at timestamp null
+);
