@@ -46,7 +46,7 @@ Steps to buidl this project up `TODO`:
 </a>
 
 Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
-#### Admin
+#### Admin `Backend APIs done`
 * Login API `1 hour`
 * Customers crud API `3 hours`
 * Services crud API `3 hours`
