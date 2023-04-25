@@ -25,7 +25,7 @@ admin has the ability to manage data:
   * Node JS
   * Express
   * Postgres
-  * React (Next JS)
+  * React
   * Docker
   * ORM (sequelize)
 
