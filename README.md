@@ -1,7 +1,7 @@
 # Mrafqy
 simple project (learning purpose). for more info please read the README file
 
-Mrafqy is just a simulation app for customer e-wallet & services to purchase by customers
+Mrafqy is just a simulation app for customer e-wallet & services to purchase by customers, hint the ui in this project is very simple
 ### Business Brief:
 a simple page to show the services manager by admin & the ability to register/login for customers<br>
 each customer has an E-Wallet he can charge this wallet by stripe (or another payment gateway) and then customer can pay him bills by him wallet ,then he can see the invoices generated<br>
@@ -25,17 +25,17 @@ admin has the ability to manage data:
   * Node JS
   * Express
   * Postgres
-  * React
+  * React (Next JS)
   * Docker
   * ORM (sequelize)
 
 
-Steps to buidl this project up `TODO`:
+Steps to build this project up `TODO`:
 * `Done`Draw ERD
 * `Done` Draw Wireframe
 * `Done` Sequence Diagram
 * `Done` Set Deadline to finish Project [60~90 hours]
-* `In Proress` Work on Tasks
+* `In Progress` Work on Tasks
 * `Backlog`Dockerize the app
 * `Backlog`Add Notifications (as a new feature for an exists app)
 * `Backlog`Write Tests
