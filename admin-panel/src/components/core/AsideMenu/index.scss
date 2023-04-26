@@ -1,0 +1,57 @@
+@import "../../../scss/abstracts/mixins";
+
+.dashboard__aside {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: var(--aside-bg);
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  z-index: 999;
+  .aside {
+    &__menu {
+      position: relative;
+      margin: 0;
+      margin-bottom: 40px;
+      width: 100%;
+      margin-top: 30px;
+      padding: 0;
+      overflow-y: scroll;
+      @include flex($direction: column, $justify: flex-start, $align: normal, $gap: 10px);
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #fff, $alpha: 0.6);
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba($color: #fff, $alpha: 0.7);
+      }
+      .nav-link {
+        @include flex($direction: row, $justify: flex-start, $align: center, $gap: 10px);
+        padding: 0.5rem 1rem 0.5rem 0.8rem;
+        text-transform: capitalize;
+        position: relative;
+        color: var(--menu-link-color);
+        @include nowarp;
+        transition: all 0.4s ease-in-out;
+        margin: 1px 20px;
+        border-radius: 5px;
+        &.active {
+          color: var(--menu-link-active);
+          background-color: var(--aside-bg-hover);
+        }
+
+        &:hover {
+          color: var(--menu-link-hover);
+          // background-color: var(--aside-bg-hover);
+        }
+      }
+    }
+  }
+}

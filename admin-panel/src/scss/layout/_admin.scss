@@ -1,0 +1,15 @@
+// .dashboard__content {
+//   margin-top: 50px;
+// }
+
+.dashboard {
+  &__aside {
+    width: var(--aside-width);
+  }
+  &__content {
+    flex-grow: 1;
+    padding: 20px;
+    min-height: 300vh;
+    margin-left: var(--aside-width);
+  }
+}

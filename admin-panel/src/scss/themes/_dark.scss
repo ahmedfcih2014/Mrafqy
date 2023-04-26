@@ -1,0 +1,51 @@
+html[data-theme="dark"] {
+  // Base
+  --bg: #1a1d21;
+  --scrollbat-bg: #292e32;
+  --text-color: #ced4da;
+  --text-mute: #878a99;
+  --alert-color: #cb2027;
+
+  --input-bg: var(--aside-bg);
+  --input-border: var(--aside-border);
+  --placeholder-color: #797c88;
+
+  // Switch Theme
+  --switch-dark: #f8f8f8;
+  --switch-light: #1a1d21;
+
+  // Button
+  --button-color: var(--main-color);
+  --button-bg: var(--main-color);
+  --button-mute-bg: #2a2f34;
+
+  // Navbar Colors
+  --navbar-bg: #292e32;
+
+  // Aside Colors
+  --aside-bg: #1a1d21;
+  --aside-border: #4c4949;
+  --menu-title-color: #ced4da;
+  --menu-link-color: #878a99;
+  --menu-sub-title-color: #919da9;
+  --menu-link-active: var(--main-color);
+  --menu-link-hover: var(--main-color);
+  --aside-bg-hover: #212529;
+
+  // Auth
+  --login-popup-bg: #212529;
+
+  // Table Colors
+  --table-bg: #292e32;
+  --main-table-th-bg: var(--main-color);
+  --secound-table-th-bg: #324960;
+  --table-th-color: #fff;
+  --table-td-border: #212529;
+  --table-td-color: #fff;
+  --def-row-color: #1a1d21;
+
+  // Pagination
+  --pagi-active-bg: #f5f6f7;
+  --pagi-active-color: var(--main-color);
+  --pagi-color: var(--text-color);
+}

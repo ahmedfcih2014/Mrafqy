@@ -1,0 +1,49 @@
+@mixin button {
+  display: inline-block;
+  border-radius: 7px;
+  font-size: var(--smaller-font-size);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+@mixin flex($direction, $justify, $align, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin nowarp {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin break-point($point) {
+  @if $point == desktop {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media only screen and (max-width: 991.98px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media only screen and (max-width: 575.98px) {
+      @content;
+    }
+  }
+}
+
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}

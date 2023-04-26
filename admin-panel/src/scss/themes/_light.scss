@@ -1,0 +1,54 @@
+html[data-theme="light"] {
+  // Base
+  --bg: #fff;
+  --scrollbat-bg: #bbb;
+  --text-color: #333;
+  --text-mute: #878a99;
+  --alert-color: #cb2027;
+
+  // Input
+  --input-bg: #fff;
+  --input-border: var(--aside-border);
+  --placeholder-color: #85959c;
+
+  // Switch Theme
+  --switch-dark: #333;
+  --switch-light: #f8f8f8;
+
+  // Button
+  --button-color: var(--main-color);
+  --button-bg: var(--main-color);
+  --button-mute-bg: #e1e4e7;
+
+  // Navbar Colors
+  --navbar-bg: #fff;
+
+  // Aside Colors
+  --aside-bg: #f6f8fa;
+  --aside-border: #dee2e6;
+  --menu-title-color: #3c3c43eb;
+  --menu-link-color: #3c3c43b3;
+  --menu-sub-title-color: #919da9;
+  --menu-link-active: var(--main-color);
+  --menu-link-hover: var(--main-color);
+  --aside-bg-hover: #f3f4f6;
+
+  // Auth
+  --login-popup-bg: #f5f6f7;
+
+  // Table Colors
+  --table-bg: #fff;
+  --main-table-th-bg: var(--main-color);
+  --secound-table-th-bg: #324960;
+  --table-th-color: #fff;
+  --table-td-border: #f5f6f7;
+  --table-td-color: #333333;
+  --def-row-color: #f8f8f8;
+
+  // Pagination
+  --pagi-active-bg: #f5f6f7;
+  --pagi-active-color: var(--main-color);
+  --pagi-color: var(--text-color);
+
+  //
+}

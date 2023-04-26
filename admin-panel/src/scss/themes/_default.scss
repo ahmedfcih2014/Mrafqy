@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: light) {
+  html {
+    // Aside Colors
+
+    --aside-bg: #f6f8fa;
+    --menu-title-color: #919da9;
+    --menu-sub-title-color: #919da9;
+    --menu-link-active: blue;
+    --menu-link-hover: #25a0e2;
+    --aside-bg-hover: #f3f4f6;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    // Aside Colors
+
+    --aside-bg: #f6f8fa;
+    --menu-title-color: #919da9;
+    --menu-sub-title-color: #919da9;
+    --menu-link-active: blue;
+    --menu-link-hover: #25a0e2;
+    --aside-bg-hover: #f3f4f6;
+  }
+}
