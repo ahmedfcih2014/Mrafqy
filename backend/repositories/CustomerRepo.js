@@ -96,4 +96,9 @@ export default {
         await pgPool.query('UPDATE customers SET token = $1, token_valid_til = $2 WHERE id = $3', [token, validTokenTil, customer.id])
         return token
     },
+    login: async (phone, password) => {
+        const result = await pgPool.query("SELECT * FROM customers WHERE phone = $1 and password = $2", [phone, password])
+        if (result.rowCount <= 0) throw "Customer not found"
+        return result.rows[0]
+    },
 }
