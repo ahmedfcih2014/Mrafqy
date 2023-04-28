@@ -16,6 +16,8 @@ CREATE TABLE customers (
     password varchar(200),
     photo varchar(200) null,
     national_id varchar(200) null,
+    token varchar(200) null,
+    token_valid_til timestamp null,
     created_at timestamp null,
     updated_at timestamp null
 );
