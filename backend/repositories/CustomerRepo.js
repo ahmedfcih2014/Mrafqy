@@ -101,4 +101,11 @@ export default {
         if (result.rowCount <= 0) throw "Customer not found"
         return result.rows[0]
     },
+    customerByToken: async token => {
+        const validTokenTil = await moment(new Date).format("YYYY-MM-DD H:mm:ss")
+        const result = await pgPool.query('SELECT * FROM customers WHERE token = $1 and token_valid_til >= $2', [token, validTokenTil])
+
+        if (result.rowCount <= 0) throw "Token invalid"
+        return result.rows[0]
+    },
 }
