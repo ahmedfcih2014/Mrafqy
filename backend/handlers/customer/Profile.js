@@ -43,4 +43,29 @@ export default {
             })
         }
     },
+    updatePassword: async (req, res) => {
+        const {old_password, password} = req.body
+
+        try {
+            let customer = req.customer
+            if (customer.password != old_password) throw "Wrong Old Password"
+
+            customer.password = password
+
+            await CustomerRepo.update(customer.id, customer)
+
+            res.json({
+                "data": {},
+                "message": "Success"
+            })
+        } catch(err) {
+            console.log(err)
+            res.status(400)
+            .json({
+                "data": {},
+                "message": "Can`t update password in current time",
+                "err": err
+            })
+        }
+    },
 }
