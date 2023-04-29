@@ -1,0 +1,20 @@
+import validation from "../../libs/validation.js"
+
+export default async (req, res, next) => {
+    const rules = {
+        "name": "required|string|min:3|max:100",
+        "phone": `required|string|min:8|max:11|uniqueExceptId:customers,phone,${req.customer.id}`,
+        "photo": "url",
+        "national_id": "string|min:14|max:16"
+    }
+    await validation(req.body, rules, {}, (err, status) => {
+        if (!status) {
+            res.status(412).json({
+                message: 'Validation failed',
+                data: err
+            })
+        } else {
+            next()
+        }
+    })
+}

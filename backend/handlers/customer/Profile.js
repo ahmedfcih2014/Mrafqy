@@ -1,3 +1,5 @@
+import CustomerRepo from "../../repositories/CustomerRepo.js"
+
 export default {
     getProfile: async (req, res) => {
         res.json({
@@ -11,5 +13,34 @@ export default {
             },
             "message": "Success"
         })
+    },
+    editProfile: async (req, res) => {
+        try {
+            let customer = req.customer
+            customer.name = req.body.name
+            customer.phone = req.body.phone
+            customer.photo = req.body.photo
+            customer.national_id = req.body.national_id
+
+            await CustomerRepo.update(customer.id, customer)
+
+            res.json({
+                "data": {
+                    name: customer.name,
+                    phone: customer.phone,
+                    photo: customer.photo,
+                    national_id: customer.national_id
+                },
+                "message": "Success"
+            })
+        } catch(err) {
+            console.log(err)
+            res.status(400)
+            .json({
+                "data": {},
+                "message": "Can`t update profile in current time",
+                "err": err
+            })
+        }
     },
 }
