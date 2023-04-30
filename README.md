@@ -68,7 +68,7 @@ Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
 * Get Profile API `1 hour` [API Done]
 * Change Password API `1 hour` [API Done]
 * Edit Profile API `1 hour` [API Done]
-* Home API `1 hour`
+* Home API `1 hour` [API Done]
 * Invoices List/Show API `2 hours`
 * Transfer List/Show API `2 hours`
 * Services List/Show API `2 hours`
