@@ -11,6 +11,7 @@ import Services from '../handlers/customer/Services.js'
 import BuyService from '../validations/customer/BuyService.js'
 import Wallet from '../handlers/customer/Wallet.js'
 import TransferWallet from '../validations/customer/TransferWallet.js'
+import Invoices from '../handlers/customer/Invoices.js'
 
 const routes = express.Router()
 
@@ -25,5 +26,7 @@ routes.get("/services", CustomerTokenValid, Services.getServices)
 routes.get("/services/:id", CustomerTokenValid, Services.show)
 routes.post("/buy-service", CustomerTokenValid, BuyService, Services.buyService)
 routes.post("/transfer", CustomerTokenValid, TransferWallet, Wallet.transferWallet)
+routes.get("/invoices", CustomerTokenValid, Invoices.invoices)
+routes.get("/invoices/:id", CustomerTokenValid, Invoices.showInvoice)
 
 export default routes

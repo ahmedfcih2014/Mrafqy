@@ -61,4 +61,10 @@ export default {
         if (result.rowCount <= 0) throw "Invoice not created for current time, try again later"
         return result.rows[0]
     },
+    getCustomerInvoice: async (customerId, invoiceId) => {
+        const result = await pgPool.query("SELECT * FROM invoices where customer_id = $1 and id = $2", [customerId ,invoiceId])
+        if (result.rowCount <= 0) throw "Invoice not found"
+
+        return result.rows[0]
+    },
 }
