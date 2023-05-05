@@ -9,6 +9,8 @@ import UpdatePassword from '../validations/customer/UpdatePassword.js'
 import Home from '../handlers/customer/Home.js'
 import Services from '../handlers/customer/Services.js'
 import BuyService from '../validations/customer/BuyService.js'
+import Wallet from '../handlers/customer/Wallet.js'
+import TransferWallet from '../validations/customer/TransferWallet.js'
 
 const routes = express.Router()
 
@@ -22,5 +24,6 @@ routes.get("/home", CustomerTokenValid, Home.getHome)
 routes.get("/services", CustomerTokenValid, Services.getServices)
 routes.get("/services/:id", CustomerTokenValid, Services.show)
 routes.post("/buy-service", CustomerTokenValid, BuyService, Services.buyService)
+routes.post("/transfer", CustomerTokenValid, TransferWallet, Wallet.transferWallet)
 
 export default routes

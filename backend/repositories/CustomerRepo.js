@@ -108,4 +108,9 @@ export default {
         if (result.rowCount <= 0) throw "Token invalid"
         return result.rows[0]
     },
+    getByPhone: async phone => {
+        const result = await pgPool.query("SELECT * FROM customers WHERE phone = $1", [phone])
+        if (result.rowCount <= 0) throw "Customer not found"
+        return result.rows[0]
+    },
 }
