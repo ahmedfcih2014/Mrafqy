@@ -36,6 +36,9 @@ Steps to build this project up `TODO`:
 * `Done` Sequence Diagram
 * `Done` Set Deadline to finish Project [60~90 hours]
 * `In Progress` Work on Tasks
+* `Done` Backend Tasks
+* `Backlog` Frontend Tasks
+* `Backlog` Refactoring
 * `Backlog`Dockerize the app
 * `Backlog`Add Notifications (as a new feature for an exists app)
 * `Backlog`Write Tests
