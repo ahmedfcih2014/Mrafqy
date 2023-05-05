@@ -73,4 +73,4 @@ Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
 * Buy Service API `3 hours` [API Done]
 * Transfer To Wallet API `3 hours` [API Done]
 * Invoices List/Show API `2 hours` [API Done]
-* Transfer List/Show API `2 hours`
+* Transfer List/Show API `2 hours` [API Done]

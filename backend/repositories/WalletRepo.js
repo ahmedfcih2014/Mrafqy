@@ -154,4 +154,22 @@ export default {
         }
         return true
     },
+    getTransfers: async (customerId, limit, page) => {
+        const offset = limit * (page - 1)
+
+        const result = await pgPool.query("SELECT * FROM transfers where source_customer_id = $1 order by id desc limit $2 offset $3", [customerId, limit, offset])
+
+        const countResult = await pgPool.query("SELECT COUNT(id) as count FROM transfers where source_customer_id = $1", [customerId])
+
+        return {
+            rows: result.rows,
+            count: countResult.rows[0].count
+        }
+    },
+    showTransfer: async (customerId, id) => {
+        const result = await pgPool.query("SELECT * FROM transfers where source_customer_id = $1 and id = $2", [customerId, id])
+        if (result.rowCount <= 0) throw "Transfer not found"
+
+        return result.rows[0]
+    }
 }

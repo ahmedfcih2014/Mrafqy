@@ -28,5 +28,7 @@ routes.post("/buy-service", CustomerTokenValid, BuyService, Services.buyService)
 routes.post("/transfer", CustomerTokenValid, TransferWallet, Wallet.transferWallet)
 routes.get("/invoices", CustomerTokenValid, Invoices.invoices)
 routes.get("/invoices/:id", CustomerTokenValid, Invoices.showInvoice)
+routes.get("/transfers", CustomerTokenValid, Wallet.transfers)
+routes.get("/transfers/:id", CustomerTokenValid, Wallet.showTransfer)
 
 export default routes

@@ -26,4 +26,45 @@ export default {
             })
         }
     },
+    transfers: async (req, res) => {
+        try {
+            const limit = req.query.per_page ? req.query.per_page : 10
+            const page = req.query.page ? req.query.page : 1
+
+            const customer = req.customer
+            const transfers = await WalletRepo.getTransfers(customer.id, limit, page)
+
+            res.json({
+                "data": {
+                    "transfers": transfers.rows,
+                    "count": transfers.count,
+                },
+                "message": "Success"
+            })
+        } catch (err) {
+            res.status(400)
+            .json({
+                "data": {},
+                "message": "Can`t get transfers in current time",
+                "err": err
+            })
+        }
+    },
+    showTransfer: async (req, res) => {
+        try {
+            const transfer = await WalletRepo.showTransfer(req.customer.id, req.params.id)
+
+            res.json({
+                "data": transfer,
+                "message": "Success"
+            })
+        } catch (err) {
+            res.status(400)
+            .json({
+                "data": {},
+                "message": "Can`t get transfer in current time",
+                "err": err
+            })
+        }
+    },
 }
