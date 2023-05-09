@@ -16,6 +16,8 @@ CREATE TABLE customers (
     password varchar(200),
     photo varchar(200) null,
     national_id varchar(200) null,
+    token varchar(200) null,
+    token_valid_til timestamp null,
     created_at timestamp null,
     updated_at timestamp null
 );
@@ -58,6 +60,16 @@ CREATE TABLE invoices (
     tax double precision default 0,
     vat double precision default 0,
     serial varchar(200),
+    created_at timestamp null,
+    updated_at timestamp null
+);
+
+CREATE TABLE transfers (
+    ID SERIAL PRIMARY KEY,
+    source_customer_id bigint,
+    destination_customer_id bigint,
+    amount double precision default 0,
+    reason varchar(200),
     created_at timestamp null,
     updated_at timestamp null
 );

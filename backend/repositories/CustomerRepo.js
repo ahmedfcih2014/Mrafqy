@@ -1,4 +1,7 @@
+import moment from "moment";
 import pgPool from "./Connection.js"
+import sha1 from "../libs/sha1.js";
+import config from "../config.js";
 
 export default {
     create: async (customer) => {
@@ -84,5 +87,30 @@ export default {
     customersCount: async () => {
         const countResult = await pgPool.query("SELECT COUNT(id) as count FROM customers")
         return countResult.rows[0].count
+    },
+    updateCustomerToken: async (customer) => {
+        const token = await sha1.sah256(`${customer.id}-${customer.name}-${customer.phone}-${Math.random()}`)
+
+        const validTokenTil = moment(new Date).add(config.adminTokenTime, 'minutes').format("YYYY-MM-DD H:mm:ss")
+        
+        await pgPool.query('UPDATE customers SET token = $1, token_valid_til = $2 WHERE id = $3', [token, validTokenTil, customer.id])
+        return token
+    },
+    login: async (phone, password) => {
+        const result = await pgPool.query("SELECT * FROM customers WHERE phone = $1 and password = $2", [phone, password])
+        if (result.rowCount <= 0) throw "Customer not found"
+        return result.rows[0]
+    },
+    customerByToken: async token => {
+        const validTokenTil = await moment(new Date).format("YYYY-MM-DD H:mm:ss")
+        const result = await pgPool.query('SELECT * FROM customers WHERE token = $1 and token_valid_til >= $2', [token, validTokenTil])
+
+        if (result.rowCount <= 0) throw "Token invalid"
+        return result.rows[0]
+    },
+    getByPhone: async phone => {
+        const result = await pgPool.query("SELECT * FROM customers WHERE phone = $1", [phone])
+        if (result.rowCount <= 0) throw "Customer not found"
+        return result.rows[0]
     },
 }

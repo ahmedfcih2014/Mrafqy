@@ -8,4 +8,6 @@ export default {
         port: 5432,
     },
     adminTokenTime: 120,// minutes
+    vatPercentage: 14,
+    taxPercentage: 10
 }

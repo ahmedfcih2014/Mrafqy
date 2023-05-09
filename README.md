@@ -36,6 +36,9 @@ Steps to build this project up `TODO`:
 * `Done` Sequence Diagram
 * `Done` Set Deadline to finish Project [60~90 hours]
 * `In Progress` Work on Tasks
+* `Done` Backend Tasks
+* `Backlog` Frontend Tasks
+* `Backlog` Refactoring
 * `Backlog`Dockerize the app
 * `Backlog`Add Notifications (as a new feature for an exists app)
 * `Backlog`Write Tests
@@ -63,14 +66,14 @@ Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
   * last 5 registered customers
 
 #### Customer
-* Login API `1 hour`
-* Register API `1 hour`
-* Get Profile API `1 hour`
-* Change Password API `1 hour`
-* Home API `1 hour`
-* Edit Profile API `1 hour`
-* Invoices List/Show API `2 hours`
-* Transfer List/Show API `2 hours`
-* Services List/Show API `2 hours`
-* Buy Service API `3 hours`
-* Transfer To Wallet API `3 hours`
+* Login API `1 hour` [API Done]
+* Register API `1 hour` [API Done]
+* Get Profile API `1 hour` [API Done]
+* Change Password API `1 hour` [API Done]
+* Edit Profile API `1 hour` [API Done]
+* Home API `1 hour` [API Done]
+* Services List/Show API `2 hours` [API Done]
+* Buy Service API `3 hours` [API Done]
+* Transfer To Wallet API `3 hours` [API Done]
+* Invoices List/Show API `2 hours` [API Done]
+* Transfer List/Show API `2 hours` [API Done]
