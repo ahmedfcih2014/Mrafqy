@@ -65,6 +65,7 @@ Tasks & Estimate Time `estimate for backend ,frontend will take double time`:
   * last 5 bought services + invoices
   * last 5 registered customers
 
+
 #### Customer
 * Login API `1 hour` [API Done]
 * Register API `1 hour` [API Done]
