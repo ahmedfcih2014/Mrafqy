@@ -1,17 +1,20 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  // Redirect,
+} from "react-router-dom";
 
-//
+// //
 import AsideMenu from "../components/core/AsideMenu";
 
 // Pages
 import Dashboard from "../pages/Dashboard";
 import CustomersList from "../pages/Customers/index";
 
-class Default extends Component {
-  state = {};
-  render() {
-    return (
+const defaultView = () => {
+  return (
+    <>
       <div className="dashboard">
         <Router>
           <AsideMenu />
@@ -23,8 +26,8 @@ class Default extends Component {
           </main>
         </Router>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
 
-export default Default;
+export default defaultView;

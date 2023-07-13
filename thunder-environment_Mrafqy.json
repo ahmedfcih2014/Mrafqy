@@ -1,0 +1,20 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "Mrafqy",
+    "dateExported": "2023-05-20T15:18:03.420Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "admin-token",
+            "value": "f6122501511959a6aa7121fac90574f0fd895b91cdb8d32bd96f2e95271b2a4e"
+        },
+        {
+            "name": "api-token",
+            "value": "1e39ba975d044e25034be3e25915e083ea8c85f26181cce21eb923e776fad395"
+        },
+        {
+            "name": "base-url",
+            "value": "https://mrafqy-backend.onrender.com/"
+        }
+    ]
+}

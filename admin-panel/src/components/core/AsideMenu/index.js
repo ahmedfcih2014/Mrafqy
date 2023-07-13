@@ -1,6 +1,12 @@
 import { Outlet, NavLink } from "react-router-dom";
 import "./index.scss";
 
+const auth = false;
+
+let ss = () => {
+  console.log(auth);
+};
+
 const AsideMenu = () => {
   return (
     <>
@@ -15,6 +21,9 @@ const AsideMenu = () => {
             <NavLink className="nav-link" to="/customers">
               customers
             </NavLink>
+          </li>
+          <li>
+            <button onClick={ss}></button>
           </li>
         </ul>
       </aside>
